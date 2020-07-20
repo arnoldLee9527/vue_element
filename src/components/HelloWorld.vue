@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
-    <img src="../assets/logo.png">
-    <h1>{{ msg }}</h1>
+    <!--<img src="../assets/logo.png">-->
+    <!--<h1>{{ msg }}</h1>-->
     <h2>测试首页</h2>
     <ul>
       <li>
-        <a href="http://localhost:10010">zuul</a>
+        <a href="http://localhost:10010/api/user/findUser/1">zuul</a>
       </li>
     </ul>
   </div>
