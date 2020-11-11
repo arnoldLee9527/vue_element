@@ -1,18 +1,18 @@
-import Vue from 'vue'
 import axios from 'axios'
 import config from './config'
 
-axios.defaults.baseURL = config.api // 设置axios的基础请求路径
+axios.defaults.baseURL = 'http://localhost:10010/api' // 设置axios的基础请求路径
 axios.defaults.timeout = 2000 // 设置axios的请求时间
+// 创建实例时设置配置的默认值
+var instance = axios.create({
+  baseURL: 'http://localhost:10010/api'
+})
+instance.interceptors.request.use(function (request) {
+  // console.log(config);
+  return request
+})
+instance.interceptors.response.use(function (response) {
+  return response
+})
 
-// axios.interceptors.request.use(function (config) {
-//   // console.log(config);
-//   return config;
-// })
-
-axios.loadData = async function (url) {
-  const resp = await axios.get(url)
-  return resp.data
-}
-
-Vue.prototype.$axios = axios// 将axios添加到 Vue的原型，这样一切vue实例都可以使用该对象
+export default instance
