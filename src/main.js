@@ -7,7 +7,7 @@ import {Button} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:10010/api' // 设置axios的基础请求路径
+axios.defaults.baseURL = '/' // 设置axios的基础请求路径
 axios.defaults.timeout = 2000 // 设置axios的请求时间
 
 Vue.config.productionTip = false

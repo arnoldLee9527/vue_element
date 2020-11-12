@@ -29,13 +29,14 @@ export default {
   },
   methods: {
     test1 (a) {
-      this.$http({
-        url: '/user/findUser',
-        method: 'post',
-        params: {}
-      }).then(res => {
-        console.log(res)
-      })
+      // this.$http({
+      //   url: '/api/user/findUser/1',
+      //   method: 'post',
+      //   params: {}
+      // }).then(res => {
+      //   console.log(res)
+      // })
+      this.$http.post('/api/user/findUser/1')
     }
   }
 }
