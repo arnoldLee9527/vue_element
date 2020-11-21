@@ -12,7 +12,7 @@ axios.defaults.timeout = 2000 // 设置axios的请求时间
 
 Vue.config.productionTip = false
 Vue.component(Button.name, Button)
-Vue.prototype.$http = axios// 将axios添加到 Vue的原型，这样一切vue实例都可以使用该对象
+Vue.prototype.$http = axios // 将axios添加到 Vue的原型，这样一切vue实例都可以使用该对象
 // Vue.prototype.
 /* eslint-disable no-new */
 new Vue({
